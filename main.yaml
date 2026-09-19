@@ -1,5 +1,5 @@
 - name: roboshop instance management
-  hosts: localhost
+  hosts: component
   connection: local
   vars:
     domain_name: daws-90s.shop
