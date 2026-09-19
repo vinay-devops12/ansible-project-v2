@@ -1,5 +1,0 @@
-- name: configure the "{{ component }}" sever
-  hosts: "{{ component }}"
-  become: true
-  roles:
-    - "{{ component }}"
