@@ -33,7 +33,7 @@
     amazon.aws.route53:
       state: present
       zone: "{{ domain_name }}"
-      record: "{{ item.item }}.{{ domain_name }}" #mongodb.daws90s.shop
+      record: "{{ item.item }}.{{ domain_name }}" #mongodb.daws-90s.shop
       type: A
       ttl: 1
       value: "{{ item.instances[0].private_ip_address }}"

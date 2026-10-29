@@ -1,11 +1,15 @@
-- name: enable nodejs 20
-  command: dnf module enable nodejs:20 -y
-
-- name: install nodejs 20
+- name: install python
   package:
-    name: nodejs
+    name: "{{ item }}"
     state: present
-    
+  loop:
+  - python3 
+  - gcc 
+  - python3-devel
+
 - name: install dependencies
-  community.general.npm:
-    path: /app
+  pip: 
+    requirements: requirements.txt
+    executable: pip3.9
+  args:
+    chdir: /app
